@@ -1,4 +1,4 @@
-import { TestDataSource } from '../../src/test-data-source'
+import { TestDataSource } from '../test-data-source'
 import { User } from '../../src/entity/User'
 import { Item } from '../../src/entity/Item'
 import { Basket } from '../../src/entity/Basket'
