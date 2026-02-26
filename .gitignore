@@ -3,3 +3,6 @@ node_modules/*
 *.log
 .idea/*
 *.backup
+test.sqlite
+test.sqlite3
+*.db
