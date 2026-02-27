@@ -8,6 +8,13 @@ pipeline {
     }
 
     stages {
+        stage('Test') {
+            steps {
+                sh 'npm install'
+                sh 'npm test'
+            }
+        }
+
         stage("Build container") {
             steps {
                 // !!!! Attention !!!! : Assurez-vous que :
