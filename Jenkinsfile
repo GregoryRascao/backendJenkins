@@ -38,5 +38,12 @@ pipeline {
                }
             }
         }
+
+        stage('Cleaning up') {
+            steps {
+                sh 'docker image rm -f deployment'
+                sh 'rm ./deployment.tar'
+            }
+        }
     }
 }
