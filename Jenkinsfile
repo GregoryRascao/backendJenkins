@@ -39,10 +39,10 @@ pipeline {
             }
         }
 
-        stage('Cleaning up') {
-            steps {
-                sh 'docker image rm -f deployment'
-                sh 'rm ./deployment.tar'
+        post {
+            always {
+                sh 'docker image rm -f deployment-front || true'
+                sh 'rm ./deployment-front.tar || true'
             }
         }
     }
