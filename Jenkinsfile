@@ -46,6 +46,14 @@ pipeline {
                }
             }
         }
+
+        stage('Trigger front pipeline') {
+            steps {
+                build job: 'prod',
+                            wait: false,
+                            propagate: false
+            }
+        }
     }
 
     post {
